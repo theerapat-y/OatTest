@@ -11,7 +11,7 @@ sub run_tests {
     is(fizzbuzz(3), "fizz", 'speak fizz by 3');
     is(fizzbuzz(6), "fizz", 'speak fizz by 6');
 
-    done_testing(2);
+    done_testing(4);
 
     exit;
 }
@@ -25,6 +25,8 @@ sub main {
 
 sub fizzbuzz {
 	my $num = $_[0];
+	my $is_fizz = ($num % 3 == 0);
+	return "fizz" if $is_fizz;
 	return "$num";
 }
 
