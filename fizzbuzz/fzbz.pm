@@ -14,7 +14,10 @@ sub run_tests {
     is(fizzbuzz(5), "buzz", 'speak buzz by 5');
     is(fizzbuzz(10), "buzz", 'speak buzz by 10');
 
-    done_testing(6);
+    is(fizzbuzz(15), "fizzbuzz", 'speak buzz by 15');
+    is(fizzbuzz(30), "fizzbuzz", 'speak buzz by 30');
+
+    done_testing(8);
 
     exit;
 }
