@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 sub fizzbuzz {
-	1;
+	return shift;
 }
 
 1;
