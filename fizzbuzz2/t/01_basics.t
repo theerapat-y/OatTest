@@ -16,6 +16,9 @@ is(fzbz::fizzbuzz(6), 'fizz', '6 return fizz');
 is(fzbz::fizzbuzz(5), 'buzz', '5 return buzz');
 is(fzbz::fizzbuzz(10), 'buzz', '10 return buzz');
 
+is(fzbz::fizzbuzz(15), 'fizzbuzz', '15 return fizzbuzz');
+is(fzbz::fizzbuzz(30), 'fizzbuzz', '30 return fizzbuzz');
+
 done_testing();
 
 exit;
