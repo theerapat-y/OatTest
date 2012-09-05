@@ -8,6 +8,9 @@ sub run_tests {
     is(fizzbuzz(1), 1, 'speak number by 1');
     is(fizzbuzz(2), 2, 'speak number by 2');
 
+    is(fizzbuzz(3), "fizz", 'speak fizz by 3');
+    is(fizzbuzz(6), "fizz", 'speak fizz by 6');
+
     done_testing(2);
 
     exit;
