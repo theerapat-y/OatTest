@@ -1,8 +1,9 @@
-#!/usr/bin/perl
 package fzbz;
 
 use strict;
 use warnings;
+
+use Sub::Exporter -setup => { exports => [ qw(fizzbuzz) ] };
 
 sub fizzbuzz {
 	my $num = shift;
