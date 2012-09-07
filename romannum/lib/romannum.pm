@@ -3,7 +3,8 @@ use warnings;
 
 sub romannumber {
 	my @num = split(//, shift);
-	my $result;
+	my $result = 0;
+
 	for my $char (@num)
 	{
 		$result += convertnum($char);

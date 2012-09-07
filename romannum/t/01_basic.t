@@ -23,6 +23,11 @@ is(romannumber('M'), 1000, 'M print 1000');
 is(romannumber('XII'), 12, 'XII print 12');
 is(romannumber('DCXV'), 615, 'DCXV print 615');
 
+#test5
+is(romannumber('IX'), 9, 'IX print 9');
+is(romannumber('CDLXXXIX'), 489, 'CDLXXXIX print 489'); 
+is(romannumber('MCMXC'), 1990, 'MCMXC print 1990');
+
 done_testing();
 
 exit;
