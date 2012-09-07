@@ -4,7 +4,7 @@ use warnings;
 sub romannumber {
 	my @romannum = split(//, shift);
 	my @arabicnum;
-	my $result = 0;
+	my $result;
 
 	foreach my $romanchar (@romannum) {
 		push(@arabicnum, convertnum($romanchar));
@@ -16,7 +16,7 @@ sub romannumber {
 
 	for (my $i = 0; $i < $#romannum; $i++) {
 		if($arabicnum[$i] < $arabicnum[$i + 1]) {
-			$result-= 2 * $arabicnum[$i];
+			$result -= 2 * $arabicnum[$i];
 		}
 	}
 
@@ -25,13 +25,13 @@ sub romannumber {
 
 sub convertnum {
 	my $rmnumber = shift;
-	return 1 if $rmnumber eq 'I';
-	return 5 if $rmnumber eq 'V';
-	return 10 if $rmnumber eq 'X';
-	return 50 if $rmnumber eq 'L';
-	return 100 if $rmnumber eq 'C';
-	return 500 if $rmnumber eq 'D';
-	return 1000 if $rmnumber eq 'M';
+	return 1 if $rmnumber eq 'I' || $rmnumber eq 'i';
+	return 5 if $rmnumber eq 'V' || $rmnumber eq 'v';
+	return 10 if $rmnumber eq 'X' || $rmnumber eq 'x';
+	return 50 if $rmnumber eq 'L' || $rmnumber eq 'l';
+	return 100 if $rmnumber eq 'C' || $rmnumber eq 'c';
+	return 500 if $rmnumber eq 'D' || $rmnumber eq 'd';
+	return 1000 if $rmnumber eq 'M' || $rmnumber eq 'm';
 }
 
 1;
