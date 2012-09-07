@@ -1,5 +1,10 @@
+package romannum;
+
 use strict;
 use warnings;
+
+use Sub::Exporter -setup => { exports => [ qw(romannumber) ] };
+
 
 sub romannumber {
 	my @romannum = split(//, shift);
