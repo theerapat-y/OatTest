@@ -4,7 +4,7 @@ use warnings;
 use Test::More;
 
 BEGIN {
-	use_ok('RomanNumber', qw(convertnumber));
+	use_ok('RomanConverter', qw(convertnumber));
 }
 
 #test1

@@ -1,4 +1,4 @@
-package RomanNumber;
+package RomanConverter;
 
 use strict;
 use warnings;
