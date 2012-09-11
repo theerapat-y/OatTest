@@ -18,4 +18,10 @@ is(convertnumber('C'), 100, 'C print 100');
 is(convertnumber('D'), 500, 'D print 500');
 is(convertnumber('M'), 1000, 'M print 1000');
 
+#test3
+is(convertnumber('LX'), 60, 'LX print 60');
+is(convertnumber('MMXI'), 2011, 'MMXI print 2011');
+is(convertnumber('CCCLV'), 355, 'CCCLV print 355');
+is(convertnumber('MDCCCLXVI'), 1866, 'MDCCCLXVI print 1866');
+
 done_testing();
