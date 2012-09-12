@@ -21,6 +21,12 @@ sub convert_decimal {
 		$answer += $decimal; 
 	}
 
+	for (my $i = 0; $i < $#decimal_num; $i++) {
+		if($decimal_num[$i] < $decimal_num[$i + 1]) {
+			$answer -= 2 * $decimal_num[$i];
+		}
+	}
+
 	return $answer;
 }
 
