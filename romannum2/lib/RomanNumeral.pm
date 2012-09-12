@@ -10,10 +10,15 @@ has 'roman_number' => (is => 'rw', isa => 'Str');
 sub convert_decimal {
 	my $self = shift;
 	my @roman_char = split(//, $self->roman_number);
+	my @decimal_num;
 	my $answer;
 
 	foreach my $char (@roman_char) {
-		$answer += convert_single($char);
+		push(@decimal_num, convert_single($char));
+	}
+
+	foreach my $decimal (@decimal_num) {
+		$answer += $decimal; 
 	}
 
 	return $answer;
