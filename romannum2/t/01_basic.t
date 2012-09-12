@@ -24,4 +24,10 @@ is(convertnumber('MMXI'), 2011, 'MMXI print 2011');
 is(convertnumber('CCCLV'), 355, 'CCCLV print 355');
 is(convertnumber('MDCCCLXVI'), 1866, 'MDCCCLXVI print 1866');
 
+#test4
+is(convertnumber('XL'), 40, 'XL print 40');
+is(convertnumber('LXXIV'), 74, 'LXXIV print 74');
+is(convertnumber('CMXCIX'), 999, 'CMXCIX print 999');
+is(convertnumber('MMCDLXXXIII'), 2483, 'MMCDLXXXIII print 2483');
+
 done_testing();
