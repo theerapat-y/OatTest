@@ -5,5 +5,10 @@ use warnings;
 
 use RomanConverter qw(convertnumber);
 
-my $ans = convertnumber('MCMXCIX');
-print $ans . "\n";
+open FILE, "scripts/sample01" or die $!;
+my @entry = <FILE>;
+close FILE or die $!;
+
+foreach my $roman_input (@entry) {
+	print convertnumber($roman_input) . "\n";
+}
