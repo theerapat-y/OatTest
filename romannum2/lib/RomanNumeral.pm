@@ -1,9 +1,7 @@
 package RomanNumeral;
 
-use strict;
-use warnings;
-
 use Moose;
+use Sub::Exporter -setup => { exports => [ qw(convert_decimal) ] };
 
 has 'roman_number' => (is => 'rw', isa => 'Str');
 
@@ -14,7 +12,7 @@ sub convert_decimal {
 	my $answer;
 
 	foreach my $char (@roman_char) {
-		push(@decimal_num, convert_single($char));
+		push(@decimal_num, $self->_convert_single($char));
 	}
 
 	foreach my $decimal (@decimal_num) {
@@ -30,15 +28,15 @@ sub convert_decimal {
 	return $answer;
 }
 
-sub convert_single {
-	my $input_number = shift;
-	return 1 if $input_number eq 'I';
-	return 5 if $input_number eq 'V';
-	return 10 if $input_number eq 'X';
-	return 50 if $input_number eq 'L';
-	return 100 if $input_number eq 'C';
-	return 500 if $input_number eq 'D';
-	return 1000 if $input_number eq 'M';
+sub _convert_single {
+	my ($self, $input_number) = @_;
+	return 1 if $input_number eq 'I' || $input_number eq 'i';
+	return 5 if $input_number eq 'V' || $input_number eq 'v';
+	return 10 if $input_number eq 'X' || $input_number eq 'x';
+	return 50 if $input_number eq 'L' || $input_number eq 'l';
+	return 100 if $input_number eq 'C' || $input_number eq 'c';
+	return 500 if $input_number eq 'D' || $input_number eq 'd';
+	return 1000 if $input_number eq 'M' || $input_number eq 'm';
 }
 
 1;
