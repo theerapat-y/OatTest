@@ -3,11 +3,9 @@ package RomanNumeral;
 use Moose;
 use Sub::Exporter -setup => { exports => [ qw(convert_decimal) ] };
 
-has 'roman_number' => (is => 'rw', isa => 'Str');
-
 sub convert_decimal {
-	my $self = shift;
-	my @roman_char = split(//, $self->roman_number);
+	my ($self, $roman_number) = @_;
+	my @roman_char = split(//, $roman_number);
 	my @decimal_num;
 	my $answer;
 
