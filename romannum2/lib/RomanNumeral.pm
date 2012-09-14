@@ -3,6 +3,24 @@ package RomanNumeral;
 use Moose;
 use Sub::Exporter -setup => { exports => [ qw(convert_decimal) ] };
 
+=head1 NAME
+
+RomanNumeral - Moose class
+
+=head1 DESCRIPTION
+
+Roman numeral object
+
+=head1 METHODS
+
+=cut
+
+=head2 convert_decimal
+
+convert roman number to decimal (arabic) number.
+
+=cut
+
 sub convert_decimal {
 	my ($self, $roman_number) = @_;
 	my @roman_char = split(//, $roman_number);
@@ -26,6 +44,12 @@ sub convert_decimal {
 	return $answer;
 }
 
+=head2 _convert_single
+
+convert single roman number to decimal number.
+
+=cut
+
 sub _convert_single {
 	my ($self, $input_number) = @_;
 	return 1 if $input_number eq 'I' || $input_number eq 'i';
@@ -36,5 +60,16 @@ sub _convert_single {
 	return 500 if $input_number eq 'D' || $input_number eq 'd';
 	return 1000 if $input_number eq 'M' || $input_number eq 'm';
 }
+
+=head1 AUTHOR
+
+Theerapat Yimsirikul,,,
+
+=head1 LICENSE
+
+This library is free software. You can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
 
 1;
